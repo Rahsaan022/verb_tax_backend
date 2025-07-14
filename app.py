@@ -1,28 +1,34 @@
 from flask import Flask, request, jsonify
-import csv
 import os
+import csv
 
 app = Flask(__name__)
 RESULTS_FILE = "results.csv"
 
-# Create results.csv with headers if it doesn't exist
+# Initialize CSV with headers if it doesn't exist
 if not os.path.exists(RESULTS_FILE):
     with open(RESULTS_FILE, mode='w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['prolific_pid', 'question_id', 'answer', 'confidence'])
 
+@app.route("/")
+def home():
+    return "Verb Taxonomy Backend is Running"
+
 @app.route("/submit", methods=["POST"])
 def submit():
     data = request.json
+    prolific_id = data.get("prolific_pid", "unknown")
+    responses = data.get("responses", [])
 
     with open(RESULTS_FILE, mode='a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        for entry in data.get("responses", []):
-            writer.writerow([
-                data.get("prolific_pid", "unknown"),
-                entry["question_id"],
-                entry["answer"],
-                entry["confidence"]
-            ])
-    
-    return jsonify({"status": "success"})
+        for r in responses:
+            writer.writerow([prolific_id, r["question_id"], r["answer"], r["confidence"]])
+
+    return jsonify({"status": "ok"})
+
+# 🔥 Required for Render — bind to 0.0.0.0 and dynamic port
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

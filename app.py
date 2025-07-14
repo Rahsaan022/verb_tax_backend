@@ -28,6 +28,15 @@ def submit():
 
     return jsonify({"status": "ok"})
 
+from flask import send_file
+
+@app.route("/download", methods=["GET"])
+def download():
+    if os.path.exists(RESULTS_FILE):
+        return send_file(RESULTS_FILE, as_attachment=True)
+    else:
+        return jsonify({"error": "Results file not found"}), 404
+
 # 🔥 Required for Render — bind to 0.0.0.0 and dynamic port
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

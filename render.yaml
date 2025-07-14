@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: verb-tax-backend
+    name: verb_tax_backend
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py

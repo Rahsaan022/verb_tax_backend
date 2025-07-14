@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
+
 import os
 import csv
 
 app = Flask(__name__)
+CORS(app)
 RESULTS_FILE = "results.csv"
 
 # Initialize CSV with headers if it doesn't exist

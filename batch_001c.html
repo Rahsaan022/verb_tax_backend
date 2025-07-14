@@ -36,6 +36,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <h2>Verb Taxonomy Annotation</h2>
@@ -1061,6 +1062,40 @@
 </script>
 
 <button onclick="submitForm()">Submit and Complete Study</button>
+
+<button onclick="submitAnswers()">Submit</button>
+
+<script>
+function submitAnswers() {
+    const data = {};
+    for (let i = 0; i < 10; i++) {
+        for (let j = 1; j <= 5; j++) {
+            const q = document.querySelector(`input[name="q${i}_${j}"]:checked`);
+            const c = document.querySelector(`input[name="c${i}_${j}"]:checked`);
+            data[`q${i}_${j}`] = q ? q.value : '';
+            data[`c${i}_${j}`] = c ? c.value : '';
+        }
+    }
+
+    fetch('https://verb-tax-backend.onrender.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
+        } else {
+            alert('Submission failed. Please try again.');
+        }
+    })
+    .catch(error => {
+        alert('Error submitting data: ' + error);
+    });
+}
+</script>
+
+
 
 
 </body>

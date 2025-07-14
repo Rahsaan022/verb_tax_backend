@@ -5,7 +5,7 @@ import os
 import csv
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 RESULTS_FILE = "results.csv"
 
 # Initialize CSV with headers if it doesn't exist

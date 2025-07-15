@@ -1057,7 +1057,7 @@
 <script>
   function submitForm() {
     // You could add form validation here if needed
-    window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
+    // window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
   }
 </script>
 
@@ -1103,7 +1103,50 @@ function submitResults() {
 
 </script>
 
-<button onclick="submitResults()">Submit</button>
+<script>
+function submitResults() {
+    const prolificId = new URLSearchParams(window.location.search).get("PROLIFIC_PID") || "UNKNOWN";
+    const responses = [];
+
+    for (let i = 0; i <= 9; i++) {  // Assuming 10 utterances
+        for (let j = 1; j <= 5; j++) {
+            const q = document.querySelector(`input[name="q${i}_${j}"]:checked`);
+            const c = document.querySelector(`input[name="c${i}_${j}"]:checked`);
+            if (q && c) {
+                responses.push({
+                    question_id: `q${i}_${j}`,
+                    answer: q.value,
+                    confidence: parseInt(c.value)
+                });
+            } else {
+                alert(`Please complete all answers and confidence ratings for Utterance ${i + 1}, Question ${j}`);
+                return;
+            }
+        }
+    }
+
+    fetch("https://verb-tax-backend.onrender.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prolific_pid: prolificId, responses: responses })
+    })
+    .then(res => {
+        if (res.ok) {
+            window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
+        } else {
+            alert("Submission failed. Please refresh and try again.");
+        }
+    })
+    .catch(err => {
+        alert("Error submitting. Please check your connection and try again.");
+        console.error(err);
+    });
+}
+</script>
+
+<div style="text-align: center; margin-top: 40px;">
+    <button onclick="submitResults()" style="padding: 10px 20px; font-size: 16px;">Submit</button>
+</div>
 
 </body>
 </html>

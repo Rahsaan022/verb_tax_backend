@@ -35,10 +35,10 @@ from flask import send_file, make_response
 
 @app.route('/download', methods=['GET'])
 def download_results():
-    if not os.path.exists('results.csv'):
+    if not os.path.exists(RESULTS_FILE):
         return "No results available yet.", 404
 
-    response = make_response(send_file('results.csv', as_attachment=True))
+    response = make_response(send_file(RESULTS_FILE, as_attachment=True))
     response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
     response.headers['Pragma'] = 'no-cache'
     response.headers['Expires'] = '0'

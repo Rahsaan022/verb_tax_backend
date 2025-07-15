@@ -31,14 +31,18 @@ def submit():
 
     return jsonify({"status": "ok"})
 
-from flask import send_file
+from flask import send_file, make_response
 
-@app.route("/download", methods=["GET"])
-def download():
-    if os.path.exists(RESULTS_FILE):
-        return send_file(RESULTS_FILE, as_attachment=True)
-    else:
-        return jsonify({"error": "Results file not found"}), 404
+@app.route('/download', methods=['GET'])
+def download_results():
+    if not os.path.exists('results.csv'):
+        return "No results available yet.", 404
+
+    response = make_response(send_file('results.csv', as_attachment=True))
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
 
 # 🔥 Required for Render — bind to 0.0.0.0 and dynamic port
 if __name__ == "__main__":

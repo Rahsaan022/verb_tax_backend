@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Verb Taxonomy Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .utterance-block {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .question {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .radio-group {
+            margin-bottom: 20px;
+        }
+        .confidence-label {
+            margin-right: 10px;
+        }
+        .disambiguation-note {
+            font-size: 0.95em;
+            color: #444;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Verb Taxonomy Annotation</h2>
+<p>Please read the utterance and answer the binary questions below. Then indicate how confident you are in each answer.</p>
+<p>Within each sentence, please describe the use of the selected verb ONLY, not the whole sentence itself.</p>
+<br>
+<p>Is the verb:</p>
+<P> 1) Communicatively Targeted? Does the verb's execution communicate to another, like a command or wave?</p>
+<p> 2) Externally Perceptible? Can someone else see it, like "run" or is it internal like "become upset?"</p>
+<p> 3) in the Present? Is the verb happening here and now? Not past, future, or hypothetical (should, could, would) </p>
+<p> 4) describing a State -- "I know Spanish," "He has one" -- or an experience "I studied Spanish," "I will take one."</p>
+<p> 5) Agentive? Does the verb reflect an agent's will or volition? Eg., walking, jumping vs falling or aging. </p>
+<br>
+<p>More demonstrative examples are found beneath each question block. </p>
+<br>
+<!-- NIA Label: Enduring -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> we have worn different uniforms walked different paths but we have carried the same code always</p>
+    <p><strong>Verb:</strong> worn</p>
+    <p><strong>Disambiguation:</strong> None</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q0_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q0_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c0_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c0_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c0_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c0_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c0_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q0_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q0_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c0_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c0_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c0_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c0_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c0_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q0_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q0_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c0_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c0_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c0_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c0_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c0_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a State?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q0_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q0_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c0_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c0_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c0_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c0_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c0_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q0_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q0_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c0_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c0_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c0_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c0_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c0_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: Subjective -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> i totally respect your beliefs i just think they are a phase you will grow out of</p>
+    <p><strong>Verb:</strong> grow</p>
+    <p><strong>Disambiguation:</strong> None</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q1_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q1_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c1_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c1_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c1_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c1_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c1_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q1_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q1_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c1_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c1_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c1_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c1_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c1_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q1_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q1_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c1_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c1_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c1_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c1_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c1_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a State?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q1_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q1_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c1_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c1_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c1_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c1_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c1_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q1_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q1_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c1_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c1_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c1_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c1_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c1_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: Enduring -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> you have been like this for years but i still do not really get what it means to you</p>
+    <p><strong>Verb:</strong> get</p>
+    <p><strong>Disambiguation:</strong> get (understand, comprehend)</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q2_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q2_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c2_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c2_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c2_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c2_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c2_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q2_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q2_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c2_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c2_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c2_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c2_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c2_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q2_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q2_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c2_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c2_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c2_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c2_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c2_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a state?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q2_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q2_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c2_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c2_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c2_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c2_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c2_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q2_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q2_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c2_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c2_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c2_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c2_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c2_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: Evolving -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> you are building strategies that did not exist for you last month</p>
+    <p><strong>Verb:</strong> building</p>
+    <p><strong>Disambiguation:</strong> None</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q3_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q3_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c3_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c3_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c3_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c3_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c3_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q3_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q3_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c3_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c3_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c3_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c3_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c3_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q3_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q3_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c3_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c3_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c3_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c3_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c3_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a state?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q3_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q3_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c3_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c3_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c3_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c3_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c3_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q3_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q3_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c3_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c3_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c3_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c3_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c3_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: System -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> this role has great growth potential assuming you are okay with twelve hour days and zero boundaries</p>
+    <p><strong>Verb:</strong> assuming</p>
+    <p><strong>Disambiguation:</strong> assuming = "if we assume that"</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q4_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q4_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c4_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c4_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c4_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c4_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c4_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q4_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q4_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c4_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c4_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c4_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c4_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c4_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q4_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q4_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c4_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c4_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c4_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c4_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c4_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a state?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q4_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q4_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c4_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c4_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c4_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c4_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c4_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q4_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q4_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c4_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c4_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c4_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c4_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c4_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: Mind -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> he whispers key terms to himself while studying</p>
+    <p><strong>Verb:</strong> studying</p>
+    <p><strong>Disambiguation:</strong> None</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q5_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q5_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c5_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c5_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c5_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c5_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c5_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q5_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q5_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c5_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c5_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c5_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c5_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c5_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q5_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q5_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c5_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c5_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c5_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c5_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c5_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a state?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q5_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q5_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c5_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c5_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c5_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c5_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c5_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q5_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q5_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c5_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c5_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c5_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c5_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c5_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: Evolving -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> it is nice you are improving but do not forget who got you here</p>
+    <p><strong>Verb:</strong> improving</p>
+    <p><strong>Disambiguation:</strong> None</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q6_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q6_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c6_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c6_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c6_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c6_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c6_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q6_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q6_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c6_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c6_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c6_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c6_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c6_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q6_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q6_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c6_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c6_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c6_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c6_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c6_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a state?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q6_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q6_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c6_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c6_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c6_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c6_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c6_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q6_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q6_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c6_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c6_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c6_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c6_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c6_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: Non-Self -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> their line formed along the west wall</p>
+    <p><strong>Verb:</strong> formed</p>
+    <p><strong>Disambiguation:</strong> None</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q7_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q7_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c7_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c7_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c7_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c7_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c7_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q7_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q7_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c7_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c7_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c7_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c7_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c7_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q7_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q7_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c7_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c7_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c7_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c7_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c7_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a state?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q7_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q7_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c7_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c7_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c7_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c7_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c7_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q7_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q7_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c7_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c7_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c7_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c7_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c7_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: Subjective -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> that is one way to feel about it let us explore some other interpretations</p>
+    <p><strong>Verb:</strong> feel</p>
+    <p><strong>Disambiguation:</strong> feel (emotion, judgment)</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q8_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q8_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c8_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c8_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c8_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c8_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c8_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q8_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q8_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c8_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c8_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c8_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c8_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c8_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q8_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q8_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c8_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c8_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c8_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c8_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c8_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a state?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q8_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q8_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c8_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c8_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c8_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c8_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c8_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q8_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q8_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c8_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c8_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c8_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c8_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c8_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+<!-- NIA Label: Enduring -->
+<div class="utterance-block">
+    <p><strong>Utterance:</strong> the tide reaches the same high point on clear days</p>
+    <p><strong>Verb:</strong> reaches</p>
+    <p><strong>Disambiguation:</strong> None</p>
+    <!-- Binary 1 -->
+<div class="question">1. Is this an example of a Targeted verb?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q9_1" value="yes"> Yes</label>
+    <label><input type="radio" name="q9_1" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c9_1" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c9_1" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c9_1" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c9_1" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c9_1" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 2 -->
+<div class="question">2. Is this verb Externally Perceptible?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q9_2" value="yes"> Yes</label>
+    <label><input type="radio" name="q9_2" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c9_2" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c9_2" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c9_2" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c9_2" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c9_2" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 3 -->
+<div class="question">3. Is this verb in the Present?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q9_3" value="yes"> Yes</label>
+    <label><input type="radio" name="q9_3" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c9_3" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c9_3" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c9_3" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c9_3" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c9_3" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 4 -->
+<div class="question">4. Is this describing a state?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q9_4" value="yes"> Yes</label>
+    <label><input type="radio" name="q9_4" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c9_4" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c9_4" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c9_4" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c9_4" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c9_4" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+<!-- Binary 5 -->
+<div class="question">5. Is this verb Agentive?</div>
+<div class="radio-group">
+    <label><input type="radio" name="q9_5" value="yes"> Yes</label>
+    <label><input type="radio" name="q9_5" value="no"> No</label>
+</div>
+<div class="question">Confidence:</div>
+<div class="radio-group">
+    <label class="confidence-label"><input type="radio" name="c9_5" value="1">1</label>
+    <label class="confidence-label"><input type="radio" name="c9_5" value="2">2</label>
+    <label class="confidence-label"><input type="radio" name="c9_5" value="3">3</label>
+    <label class="confidence-label"><input type="radio" name="c9_5" value="4">4</label>
+    <label class="confidence-label"><input type="radio" name="c9_5" value="5">5</label>
+</div>
+<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
+<hr>
+<br>
+
+    <div class="disambiguation-note">
+        <strong>Disambiguation Examples:</strong><br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+    </div>
+</div>
+
+
+<script>
+  function submitForm() {
+    // You could add form validation here if needed
+    // window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
+  }
+</script>
+
+<script>
+function submitResults() {
+    const prolificId = new URLSearchParams(window.location.search).get("PROLIFIC_PID") || "UNKNOWN";
+    const responses = [];
+
+    for (let i = 0; i < 10; i++) {
+        for (let j = 1; j <= 5; j++) {
+            const q = document.querySelector(`input[name="q${i}_${j}"]:checked`);
+            const c = document.querySelector(`input[name="c${i}_${j}"]:checked`);
+            if (q && c) {
+                responses.push({
+                    question_id: `q${i}_${j}`,
+                    answer: q.value,
+                    confidence: parseInt(c.value)
+                });
+            }
+        }
+    }
+
+    fetch("https://verb-tax-backend.onrender.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            prolific_pid: prolificId,
+            responses: responses
+        })
+    })
+    .then(res => {
+        if (res.ok) {
+            window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
+        } else {
+            alert("Submission failed. Please refresh and try again.");
+        }
+    })
+    .catch(err => {
+        alert("Error submitting. Please check your connection and try again.");
+        console.error(err);
+    });
+}
+
+</script>
+
+<button onclick="submitResults()">Submit</button>
+
+</body>
+</html>

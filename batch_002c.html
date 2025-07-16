@@ -1118,23 +1118,37 @@
                 const questions = block.querySelectorAll('.question');
                 questions.forEach((q, qIndex) => {
                     const q_num = qIndex + 1;
-                    const question_id = `${eval_id}_{q_num}`;
-                    const answerInputs = q.querySelectorAll('input[type="radio"]');
+                    const question_id = `${eval_id}_${q_num}`;
+                    const answerInputs = q.querySelectorAll(`input[name="${question_id}_answer"]`);
+                    const confidenceInputs = document.querySelectorAll(`input[name="${question_id}_confidence"]`);
+                    const labelTrueInput = document.querySelector(`input[name="${question_id}_label_true"]`);
+                    const batchFilenameInput = document.querySelector(`input[name="${question_id}_batch_filename"]`);
+
                     let answer = '';
-                    answerInputs.forEach(input => {
-                        if (input.checked) answer = input.value;
-                    });
-                    const confidenceDiv = block.querySelectorAll('.confidence')[qIndex];
-                    const confidenceInputs = confidenceDiv.querySelectorAll('input[type="radio"]');
+                    answerInputs.forEach(input => { if (input.checked) answer = input.value; });
+
                     let confidence = '';
-                    confidenceInputs.forEach(input => {
-                        if (input.checked) confidence = input.value;
-                    });
+                    confidenceInputs.forEach(input => { if (input.checked) confidence = input.value; });
+
+                    const label_true = labelTrueInput ? labelTrueInput.value : 'unknown';
+                    const batch_filename = batchFilenameInput ? batchFilenameInput.value : 'unknown';
+
                     if (answer && confidence) {
-                        responses.push({ question_id, answer, confidence });
+                        responses.push({
+                            question_id,
+                            answer,
+                            confidence,
+                            label_true,
+                            batch_filename
+                        });
                     }
                 });
             });
+
+
+
+
+
 
             const data = { prolific_pid, responses };
 

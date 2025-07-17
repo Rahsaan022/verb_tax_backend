@@ -1121,9 +1121,10 @@
                     const question_id = `${eval_id}_${q_num}`;
                     const answerInputs = q.querySelectorAll(`input[name="${question_id}_answer"]`);
                     const confidenceInputs = document.querySelectorAll(`input[name="${question_id}_confidence"]`);
-                    const labelTrueInput = document.querySelector(`input[name="${question_id}_label_true"]`);
-                    const batchFilenameInput = document.querySelector(`input[name="${question_id}_batch_filename"]`);
-
+                    const labelTrueInput = q.querySelector(`input[name="${question_id}_label_true"]`);
+                    const batchFilenameInput = q.querySelector(`input[name="${question_id}_batch_filename"]`);
+                    
+                    
                     let answer = '';
                     answerInputs.forEach(input => { if (input.checked) answer = input.value; });
 

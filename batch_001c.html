@@ -1,1152 +1,1430 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Verb Taxonomy Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verb Taxonomy Annotation</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-        }
-        .utterance-block {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-        }
-        .question {
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .radio-group {
-            margin-bottom: 20px;
-        }
-        .confidence-label {
-            margin-right: 10px;
-        }
-        .disambiguation-note {
-            font-size: 0.95em;
-            color: #444;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #ccc;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .utterance-block { margin-bottom: 40px; border-bottom: 1px solid #ccc; padding-bottom: 20px; }
+        .question { margin-top: 20px; display: flex; align-items: center; }
+        .question p { margin-right: 20px; margin-bottom: 0; }
+        .question label { margin-right: 10px; }
+        .confidence { margin-top: 10px; display: flex; align-items: center; }
+        .confidence p { margin-right: 20px; margin-bottom: 0; }
+        .confidence label { margin-right: 10px; }
+        .confidence-desc { font-size: smaller; color: grey; }
     </style>
 </head>
-
 <body>
+    <h1>Verb Taxonomy Annotation</h1>
+    <p>Please read the utterance and answer the binary questions below. Then indicate how confident you are in each answer.</p>
+    <br>
+    <p>The study includes embedded quality controls that will flag rushed or inconsistent answers.</p>
+    <p>Responses will be reviewed using several internal criteria to ensure they reflect careful reading and judgment.</p>
+    <br>
+    <p>Within each sentence, please describe the use of the selected verb ONLY, not the whole sentence itself.</p>
 
-<h2>Verb Taxonomy Annotation</h2>
-<p>Please read the utterance and answer the binary questions below. Then indicate how confident you are in each answer.</p>
-<p>Within each sentence, please describe the use of the selected verb ONLY, not the whole sentence itself.</p>
+    <p>Is the verb:</p>
+    <P> 1) Communicatively Targeted? Does the verb's execution communicate to another (like a command or wave)?</p>
+    <p> 2) Externally Perceptible? Can someone else see it, like "run" or is it internal like "become upset?"</p>
+    <p> 3) in the Present? Is the verb happening here and now? Not past, future, or hypothetical? </p>
+    <p> 4) describing reality, or Actual? Does the verb describe "what is," not what "should" or "could be?"</p>
+    <p> 5) describing a State? As in "I know Spanish," "He has one," not an experience like "I studied Spanish," "I will take one."</p>
+    <p> 6) Agentive? Does occur from someone's will or volition? Eg., walking, jumping vs falling or aging. </p>
 <br>
-<p>Is the verb:</p>
-<P> 1) Communicatively Targeted? Does the verb's execution communicate to another, like a command or wave?</p>
-<p> 2) Externally Perceptible? Can someone else see it, like "run" or is it internal like "become upset?"</p>
-<p> 3) in the Present? Is the verb happening here and now? Not past, future, or hypothetical (should, could, would) </p>
-<p> 4) describing a State -- "I know Spanish," "He has one" -- or an experience "I studied Spanish," "I will take one."</p>
-<p> 5) Agentive? Does the verb reflect an agent's will or volition? Eg., walking, jumping vs falling or aging. </p>
-<br>
-<p>More demonstrative examples are found beneath each question block. </p>
-<br>
-<!-- NIA Label: Enduring -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> we have worn different uniforms walked different paths but we have carried the same code always</p>
-    <p><strong>Verb:</strong> worn</p>
-    <p><strong>Disambiguation:</strong> None</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q0_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q0_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c0_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c0_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c0_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c0_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c0_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
 <hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q0_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q0_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c0_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c0_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c0_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c0_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c0_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q0_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q0_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c0_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c0_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c0_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c0_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c0_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a State?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q0_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q0_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c0_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c0_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c0_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c0_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c0_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q0_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q0_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c0_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c0_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c0_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c0_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c0_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
-        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+    <div class="utterance-block" data-eval-id="1528_worn_1">
+        <p><strong>Utterance:</strong> we have worn different uniforms walked different paths but we have carried the same code always</p>
+        <p><strong>Verb:</strong> worn</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="1528_worn_1_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1528_worn_1_1_answer" value="No"> No</label>
+            <input type="hidden" name="1528_worn_1_1_label_true" value="Enduring">
+            <input type="hidden" name="1528_worn_1_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1528_worn_1_1_utterance" value="we have worn different uniforms walked different paths but we have carried the same code always">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1528_worn_1_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1528_worn_1_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1528_worn_1_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1528_worn_1_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1528_worn_1_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="1528_worn_1_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1528_worn_1_2_answer" value="No"> No</label>
+            <input type="hidden" name="1528_worn_1_2_label_true" value="Enduring">
+            <input type="hidden" name="1528_worn_1_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1528_worn_1_2_utterance" value="we have worn different uniforms walked different paths but we have carried the same code always">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1528_worn_1_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1528_worn_1_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1528_worn_1_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1528_worn_1_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1528_worn_1_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="1528_worn_1_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1528_worn_1_3_answer" value="No"> No</label>
+            <input type="hidden" name="1528_worn_1_3_label_true" value="Enduring">
+            <input type="hidden" name="1528_worn_1_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1528_worn_1_3_utterance" value="we have worn different uniforms walked different paths but we have carried the same code always">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1528_worn_1_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1528_worn_1_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1528_worn_1_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1528_worn_1_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1528_worn_1_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="1528_worn_1_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1528_worn_1_4_answer" value="No"> No</label>
+            <input type="hidden" name="1528_worn_1_4_label_true" value="Enduring">
+            <input type="hidden" name="1528_worn_1_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1528_worn_1_4_utterance" value="we have worn different uniforms walked different paths but we have carried the same code always">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1528_worn_1_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1528_worn_1_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1528_worn_1_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1528_worn_1_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1528_worn_1_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="1528_worn_1_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1528_worn_1_5_answer" value="No"> No</label>
+            <input type="hidden" name="1528_worn_1_5_label_true" value="Enduring">
+            <input type="hidden" name="1528_worn_1_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1528_worn_1_5_utterance" value="we have worn different uniforms walked different paths but we have carried the same code always">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1528_worn_1_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1528_worn_1_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1528_worn_1_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1528_worn_1_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1528_worn_1_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="1528_worn_1_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1528_worn_1_6_answer" value="No"> No</label>
+            <input type="hidden" name="1528_worn_1_6_label_true" value="Enduring">
+            <input type="hidden" name="1528_worn_1_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1528_worn_1_6_utterance" value="we have worn different uniforms walked different paths but we have carried the same code always">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1528_worn_1_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1528_worn_1_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1528_worn_1_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1528_worn_1_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1528_worn_1_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
         Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
-        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
         Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: Subjective -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> i totally respect your beliefs i just think they are a phase you will grow out of</p>
-    <p><strong>Verb:</strong> grow</p>
-    <p><strong>Disambiguation:</strong> None</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q1_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q1_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c1_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c1_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c1_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c1_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c1_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q1_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q1_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c1_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c1_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c1_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c1_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c1_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q1_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q1_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c1_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c1_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c1_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c1_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c1_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a State?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q1_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q1_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c1_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c1_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c1_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c1_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c1_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q1_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q1_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c1_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c1_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c1_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c1_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c1_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: Enduring -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> you have been like this for years but i still do not really get what it means to you</p>
-    <p><strong>Verb:</strong> get</p>
-    <p><strong>Disambiguation:</strong> get (understand, comprehend)</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q2_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q2_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c2_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c2_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c2_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c2_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c2_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q2_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q2_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c2_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c2_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c2_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c2_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c2_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q2_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q2_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c2_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c2_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c2_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c2_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c2_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a state?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q2_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q2_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c2_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c2_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c2_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c2_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c2_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q2_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q2_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c2_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c2_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c2_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c2_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c2_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
+    </div>
+
+    <div class="utterance-block" data-eval-id="201_grow_1">
+        <p><strong>Utterance:</strong> i totally respect your beliefs i just think they are a phase you will grow out of</p>
+        <p><strong>Verb:</strong> grow</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="201_grow_1_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="201_grow_1_1_answer" value="No"> No</label>
+            <input type="hidden" name="201_grow_1_1_label_true" value="Subjective">
+            <input type="hidden" name="201_grow_1_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="201_grow_1_1_utterance" value="i totally respect your beliefs i just think they are a phase you will grow out of">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="201_grow_1_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="201_grow_1_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="201_grow_1_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="201_grow_1_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="201_grow_1_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="201_grow_1_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="201_grow_1_2_answer" value="No"> No</label>
+            <input type="hidden" name="201_grow_1_2_label_true" value="Subjective">
+            <input type="hidden" name="201_grow_1_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="201_grow_1_2_utterance" value="i totally respect your beliefs i just think they are a phase you will grow out of">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="201_grow_1_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="201_grow_1_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="201_grow_1_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="201_grow_1_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="201_grow_1_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="201_grow_1_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="201_grow_1_3_answer" value="No"> No</label>
+            <input type="hidden" name="201_grow_1_3_label_true" value="Subjective">
+            <input type="hidden" name="201_grow_1_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="201_grow_1_3_utterance" value="i totally respect your beliefs i just think they are a phase you will grow out of">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="201_grow_1_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="201_grow_1_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="201_grow_1_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="201_grow_1_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="201_grow_1_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="201_grow_1_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="201_grow_1_4_answer" value="No"> No</label>
+            <input type="hidden" name="201_grow_1_4_label_true" value="Subjective">
+            <input type="hidden" name="201_grow_1_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="201_grow_1_4_utterance" value="i totally respect your beliefs i just think they are a phase you will grow out of">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="201_grow_1_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="201_grow_1_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="201_grow_1_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="201_grow_1_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="201_grow_1_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="201_grow_1_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="201_grow_1_5_answer" value="No"> No</label>
+            <input type="hidden" name="201_grow_1_5_label_true" value="Subjective">
+            <input type="hidden" name="201_grow_1_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="201_grow_1_5_utterance" value="i totally respect your beliefs i just think they are a phase you will grow out of">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="201_grow_1_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="201_grow_1_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="201_grow_1_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="201_grow_1_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="201_grow_1_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="201_grow_1_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="201_grow_1_6_answer" value="No"> No</label>
+            <input type="hidden" name="201_grow_1_6_label_true" value="Subjective">
+            <input type="hidden" name="201_grow_1_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="201_grow_1_6_utterance" value="i totally respect your beliefs i just think they are a phase you will grow out of">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="201_grow_1_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="201_grow_1_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="201_grow_1_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="201_grow_1_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="201_grow_1_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: Evolving -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> you are building strategies that did not exist for you last month</p>
-    <p><strong>Verb:</strong> building</p>
-    <p><strong>Disambiguation:</strong> None</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q3_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q3_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c3_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c3_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c3_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c3_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c3_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q3_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q3_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c3_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c3_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c3_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c3_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c3_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q3_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q3_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c3_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c3_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c3_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c3_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c3_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a state?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q3_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q3_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c3_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c3_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c3_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c3_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c3_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q3_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q3_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c3_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c3_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c3_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c3_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c3_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
+    </div>
+
+    <div class="utterance-block" data-eval-id="1356_get_1">
+        <p><strong>Utterance:</strong> you have been like this for years but i still do not really get what it means to you</p>
+        <p><strong>Verb:</strong> get</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="1356_get_1_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1356_get_1_1_answer" value="No"> No</label>
+            <input type="hidden" name="1356_get_1_1_label_true" value="Enduring">
+            <input type="hidden" name="1356_get_1_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1356_get_1_1_utterance" value="you have been like this for years but i still do not really get what it means to you">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1356_get_1_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1356_get_1_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1356_get_1_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1356_get_1_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1356_get_1_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="1356_get_1_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1356_get_1_2_answer" value="No"> No</label>
+            <input type="hidden" name="1356_get_1_2_label_true" value="Enduring">
+            <input type="hidden" name="1356_get_1_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1356_get_1_2_utterance" value="you have been like this for years but i still do not really get what it means to you">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1356_get_1_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1356_get_1_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1356_get_1_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1356_get_1_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1356_get_1_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="1356_get_1_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1356_get_1_3_answer" value="No"> No</label>
+            <input type="hidden" name="1356_get_1_3_label_true" value="Enduring">
+            <input type="hidden" name="1356_get_1_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1356_get_1_3_utterance" value="you have been like this for years but i still do not really get what it means to you">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1356_get_1_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1356_get_1_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1356_get_1_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1356_get_1_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1356_get_1_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="1356_get_1_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1356_get_1_4_answer" value="No"> No</label>
+            <input type="hidden" name="1356_get_1_4_label_true" value="Enduring">
+            <input type="hidden" name="1356_get_1_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1356_get_1_4_utterance" value="you have been like this for years but i still do not really get what it means to you">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1356_get_1_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1356_get_1_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1356_get_1_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1356_get_1_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1356_get_1_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="1356_get_1_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1356_get_1_5_answer" value="No"> No</label>
+            <input type="hidden" name="1356_get_1_5_label_true" value="Enduring">
+            <input type="hidden" name="1356_get_1_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1356_get_1_5_utterance" value="you have been like this for years but i still do not really get what it means to you">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1356_get_1_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1356_get_1_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1356_get_1_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1356_get_1_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1356_get_1_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="1356_get_1_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1356_get_1_6_answer" value="No"> No</label>
+            <input type="hidden" name="1356_get_1_6_label_true" value="Enduring">
+            <input type="hidden" name="1356_get_1_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1356_get_1_6_utterance" value="you have been like this for years but i still do not really get what it means to you">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1356_get_1_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1356_get_1_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1356_get_1_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1356_get_1_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1356_get_1_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: System -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> this role has great growth potential assuming you are okay with twelve hour days and zero boundaries</p>
-    <p><strong>Verb:</strong> assuming</p>
-    <p><strong>Disambiguation:</strong> assuming = "if we assume that"</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q4_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q4_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c4_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c4_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c4_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c4_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c4_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q4_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q4_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c4_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c4_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c4_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c4_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c4_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q4_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q4_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c4_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c4_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c4_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c4_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c4_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a state?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q4_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q4_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c4_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c4_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c4_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c4_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c4_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q4_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q4_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c4_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c4_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c4_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c4_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c4_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
+    </div>
+
+    <div class="utterance-block" data-eval-id="1540_building_0">
+        <p><strong>Utterance:</strong> you are building strategies that did not exist for you last month</p>
+        <p><strong>Verb:</strong> building</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="1540_building_0_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1540_building_0_1_answer" value="No"> No</label>
+            <input type="hidden" name="1540_building_0_1_label_true" value="Evolving">
+            <input type="hidden" name="1540_building_0_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1540_building_0_1_utterance" value="you are building strategies that did not exist for you last month">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1540_building_0_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1540_building_0_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1540_building_0_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1540_building_0_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1540_building_0_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="1540_building_0_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1540_building_0_2_answer" value="No"> No</label>
+            <input type="hidden" name="1540_building_0_2_label_true" value="Evolving">
+            <input type="hidden" name="1540_building_0_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1540_building_0_2_utterance" value="you are building strategies that did not exist for you last month">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1540_building_0_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1540_building_0_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1540_building_0_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1540_building_0_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1540_building_0_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="1540_building_0_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1540_building_0_3_answer" value="No"> No</label>
+            <input type="hidden" name="1540_building_0_3_label_true" value="Evolving">
+            <input type="hidden" name="1540_building_0_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1540_building_0_3_utterance" value="you are building strategies that did not exist for you last month">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1540_building_0_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1540_building_0_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1540_building_0_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1540_building_0_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1540_building_0_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="1540_building_0_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1540_building_0_4_answer" value="No"> No</label>
+            <input type="hidden" name="1540_building_0_4_label_true" value="Evolving">
+            <input type="hidden" name="1540_building_0_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1540_building_0_4_utterance" value="you are building strategies that did not exist for you last month">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1540_building_0_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1540_building_0_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1540_building_0_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1540_building_0_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1540_building_0_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="1540_building_0_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1540_building_0_5_answer" value="No"> No</label>
+            <input type="hidden" name="1540_building_0_5_label_true" value="Evolving">
+            <input type="hidden" name="1540_building_0_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1540_building_0_5_utterance" value="you are building strategies that did not exist for you last month">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1540_building_0_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1540_building_0_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1540_building_0_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1540_building_0_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1540_building_0_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="1540_building_0_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="1540_building_0_6_answer" value="No"> No</label>
+            <input type="hidden" name="1540_building_0_6_label_true" value="Evolving">
+            <input type="hidden" name="1540_building_0_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="1540_building_0_6_utterance" value="you are building strategies that did not exist for you last month">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="1540_building_0_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="1540_building_0_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="1540_building_0_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="1540_building_0_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="1540_building_0_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: Mind -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> he whispers key terms to himself while studying</p>
-    <p><strong>Verb:</strong> studying</p>
-    <p><strong>Disambiguation:</strong> None</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q5_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q5_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c5_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c5_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c5_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c5_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c5_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q5_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q5_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c5_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c5_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c5_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c5_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c5_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q5_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q5_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c5_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c5_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c5_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c5_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c5_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a state?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q5_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q5_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c5_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c5_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c5_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c5_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c5_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q5_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q5_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c5_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c5_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c5_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c5_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c5_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
+    </div>
+
+    <div class="utterance-block" data-eval-id="230_assuming_2">
+        <p><strong>Utterance:</strong> this role has great growth potential assuming you are okay with twelve hour days and zero boundaries</p>
+        <p><strong>Verb:</strong> assuming</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="230_assuming_2_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="230_assuming_2_1_answer" value="No"> No</label>
+            <input type="hidden" name="230_assuming_2_1_label_true" value="System">
+            <input type="hidden" name="230_assuming_2_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="230_assuming_2_1_utterance" value="this role has great growth potential assuming you are okay with twelve hour days and zero boundaries">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="230_assuming_2_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="230_assuming_2_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="230_assuming_2_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="230_assuming_2_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="230_assuming_2_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="230_assuming_2_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="230_assuming_2_2_answer" value="No"> No</label>
+            <input type="hidden" name="230_assuming_2_2_label_true" value="System">
+            <input type="hidden" name="230_assuming_2_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="230_assuming_2_2_utterance" value="this role has great growth potential assuming you are okay with twelve hour days and zero boundaries">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="230_assuming_2_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="230_assuming_2_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="230_assuming_2_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="230_assuming_2_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="230_assuming_2_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="230_assuming_2_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="230_assuming_2_3_answer" value="No"> No</label>
+            <input type="hidden" name="230_assuming_2_3_label_true" value="System">
+            <input type="hidden" name="230_assuming_2_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="230_assuming_2_3_utterance" value="this role has great growth potential assuming you are okay with twelve hour days and zero boundaries">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="230_assuming_2_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="230_assuming_2_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="230_assuming_2_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="230_assuming_2_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="230_assuming_2_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="230_assuming_2_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="230_assuming_2_4_answer" value="No"> No</label>
+            <input type="hidden" name="230_assuming_2_4_label_true" value="System">
+            <input type="hidden" name="230_assuming_2_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="230_assuming_2_4_utterance" value="this role has great growth potential assuming you are okay with twelve hour days and zero boundaries">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="230_assuming_2_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="230_assuming_2_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="230_assuming_2_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="230_assuming_2_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="230_assuming_2_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="230_assuming_2_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="230_assuming_2_5_answer" value="No"> No</label>
+            <input type="hidden" name="230_assuming_2_5_label_true" value="System">
+            <input type="hidden" name="230_assuming_2_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="230_assuming_2_5_utterance" value="this role has great growth potential assuming you are okay with twelve hour days and zero boundaries">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="230_assuming_2_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="230_assuming_2_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="230_assuming_2_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="230_assuming_2_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="230_assuming_2_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="230_assuming_2_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="230_assuming_2_6_answer" value="No"> No</label>
+            <input type="hidden" name="230_assuming_2_6_label_true" value="System">
+            <input type="hidden" name="230_assuming_2_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="230_assuming_2_6_utterance" value="this role has great growth potential assuming you are okay with twelve hour days and zero boundaries">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="230_assuming_2_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="230_assuming_2_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="230_assuming_2_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="230_assuming_2_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="230_assuming_2_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: Evolving -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> it is nice you are improving but do not forget who got you here</p>
-    <p><strong>Verb:</strong> improving</p>
-    <p><strong>Disambiguation:</strong> None</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q6_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q6_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c6_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c6_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c6_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c6_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c6_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q6_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q6_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c6_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c6_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c6_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c6_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c6_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q6_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q6_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c6_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c6_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c6_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c6_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c6_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a state?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q6_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q6_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c6_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c6_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c6_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c6_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c6_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q6_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q6_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c6_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c6_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c6_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c6_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c6_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
+    </div>
+
+    <div class="utterance-block" data-eval-id="647_studying_0">
+        <p><strong>Utterance:</strong> he whispers key terms to himself while studying</p>
+        <p><strong>Verb:</strong> studying</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="647_studying_0_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="647_studying_0_1_answer" value="No"> No</label>
+            <input type="hidden" name="647_studying_0_1_label_true" value="Mind">
+            <input type="hidden" name="647_studying_0_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="647_studying_0_1_utterance" value="he whispers key terms to himself while studying">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="647_studying_0_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="647_studying_0_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="647_studying_0_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="647_studying_0_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="647_studying_0_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="647_studying_0_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="647_studying_0_2_answer" value="No"> No</label>
+            <input type="hidden" name="647_studying_0_2_label_true" value="Mind">
+            <input type="hidden" name="647_studying_0_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="647_studying_0_2_utterance" value="he whispers key terms to himself while studying">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="647_studying_0_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="647_studying_0_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="647_studying_0_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="647_studying_0_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="647_studying_0_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="647_studying_0_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="647_studying_0_3_answer" value="No"> No</label>
+            <input type="hidden" name="647_studying_0_3_label_true" value="Mind">
+            <input type="hidden" name="647_studying_0_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="647_studying_0_3_utterance" value="he whispers key terms to himself while studying">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="647_studying_0_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="647_studying_0_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="647_studying_0_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="647_studying_0_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="647_studying_0_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="647_studying_0_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="647_studying_0_4_answer" value="No"> No</label>
+            <input type="hidden" name="647_studying_0_4_label_true" value="Mind">
+            <input type="hidden" name="647_studying_0_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="647_studying_0_4_utterance" value="he whispers key terms to himself while studying">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="647_studying_0_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="647_studying_0_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="647_studying_0_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="647_studying_0_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="647_studying_0_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="647_studying_0_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="647_studying_0_5_answer" value="No"> No</label>
+            <input type="hidden" name="647_studying_0_5_label_true" value="Mind">
+            <input type="hidden" name="647_studying_0_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="647_studying_0_5_utterance" value="he whispers key terms to himself while studying">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="647_studying_0_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="647_studying_0_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="647_studying_0_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="647_studying_0_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="647_studying_0_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="647_studying_0_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="647_studying_0_6_answer" value="No"> No</label>
+            <input type="hidden" name="647_studying_0_6_label_true" value="Mind">
+            <input type="hidden" name="647_studying_0_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="647_studying_0_6_utterance" value="he whispers key terms to himself while studying">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="647_studying_0_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="647_studying_0_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="647_studying_0_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="647_studying_0_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="647_studying_0_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: Non-Self -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> their line formed along the west wall</p>
-    <p><strong>Verb:</strong> formed</p>
-    <p><strong>Disambiguation:</strong> None</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q7_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q7_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c7_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c7_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c7_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c7_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c7_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q7_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q7_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c7_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c7_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c7_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c7_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c7_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q7_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q7_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c7_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c7_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c7_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c7_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c7_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a state?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q7_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q7_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c7_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c7_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c7_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c7_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c7_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q7_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q7_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c7_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c7_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c7_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c7_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c7_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
+    </div>
+
+    <div class="utterance-block" data-eval-id="30_improving_1">
+        <p><strong>Utterance:</strong> it is nice you are improving but do not forget who got you here</p>
+        <p><strong>Verb:</strong> improving</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="30_improving_1_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="30_improving_1_1_answer" value="No"> No</label>
+            <input type="hidden" name="30_improving_1_1_label_true" value="Evolving">
+            <input type="hidden" name="30_improving_1_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="30_improving_1_1_utterance" value="it is nice you are improving but do not forget who got you here">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="30_improving_1_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="30_improving_1_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="30_improving_1_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="30_improving_1_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="30_improving_1_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="30_improving_1_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="30_improving_1_2_answer" value="No"> No</label>
+            <input type="hidden" name="30_improving_1_2_label_true" value="Evolving">
+            <input type="hidden" name="30_improving_1_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="30_improving_1_2_utterance" value="it is nice you are improving but do not forget who got you here">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="30_improving_1_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="30_improving_1_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="30_improving_1_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="30_improving_1_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="30_improving_1_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="30_improving_1_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="30_improving_1_3_answer" value="No"> No</label>
+            <input type="hidden" name="30_improving_1_3_label_true" value="Evolving">
+            <input type="hidden" name="30_improving_1_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="30_improving_1_3_utterance" value="it is nice you are improving but do not forget who got you here">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="30_improving_1_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="30_improving_1_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="30_improving_1_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="30_improving_1_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="30_improving_1_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="30_improving_1_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="30_improving_1_4_answer" value="No"> No</label>
+            <input type="hidden" name="30_improving_1_4_label_true" value="Evolving">
+            <input type="hidden" name="30_improving_1_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="30_improving_1_4_utterance" value="it is nice you are improving but do not forget who got you here">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="30_improving_1_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="30_improving_1_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="30_improving_1_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="30_improving_1_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="30_improving_1_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="30_improving_1_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="30_improving_1_5_answer" value="No"> No</label>
+            <input type="hidden" name="30_improving_1_5_label_true" value="Evolving">
+            <input type="hidden" name="30_improving_1_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="30_improving_1_5_utterance" value="it is nice you are improving but do not forget who got you here">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="30_improving_1_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="30_improving_1_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="30_improving_1_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="30_improving_1_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="30_improving_1_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="30_improving_1_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="30_improving_1_6_answer" value="No"> No</label>
+            <input type="hidden" name="30_improving_1_6_label_true" value="Evolving">
+            <input type="hidden" name="30_improving_1_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="30_improving_1_6_utterance" value="it is nice you are improving but do not forget who got you here">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="30_improving_1_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="30_improving_1_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="30_improving_1_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="30_improving_1_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="30_improving_1_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: Subjective -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> that is one way to feel about it let us explore some other interpretations</p>
-    <p><strong>Verb:</strong> feel</p>
-    <p><strong>Disambiguation:</strong> feel (emotion, judgment)</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q8_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q8_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c8_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c8_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c8_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c8_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c8_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q8_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q8_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c8_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c8_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c8_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c8_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c8_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q8_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q8_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c8_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c8_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c8_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c8_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c8_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a state?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q8_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q8_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c8_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c8_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c8_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c8_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c8_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q8_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q8_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c8_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c8_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c8_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c8_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c8_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
+    </div>
+
+    <div class="utterance-block" data-eval-id="803_formed_0">
+        <p><strong>Utterance:</strong> their line formed along the west wall</p>
+        <p><strong>Verb:</strong> formed</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="803_formed_0_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="803_formed_0_1_answer" value="No"> No</label>
+            <input type="hidden" name="803_formed_0_1_label_true" value="Non-Self">
+            <input type="hidden" name="803_formed_0_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="803_formed_0_1_utterance" value="their line formed along the west wall">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="803_formed_0_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="803_formed_0_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="803_formed_0_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="803_formed_0_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="803_formed_0_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="803_formed_0_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="803_formed_0_2_answer" value="No"> No</label>
+            <input type="hidden" name="803_formed_0_2_label_true" value="Non-Self">
+            <input type="hidden" name="803_formed_0_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="803_formed_0_2_utterance" value="their line formed along the west wall">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="803_formed_0_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="803_formed_0_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="803_formed_0_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="803_formed_0_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="803_formed_0_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="803_formed_0_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="803_formed_0_3_answer" value="No"> No</label>
+            <input type="hidden" name="803_formed_0_3_label_true" value="Non-Self">
+            <input type="hidden" name="803_formed_0_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="803_formed_0_3_utterance" value="their line formed along the west wall">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="803_formed_0_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="803_formed_0_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="803_formed_0_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="803_formed_0_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="803_formed_0_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="803_formed_0_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="803_formed_0_4_answer" value="No"> No</label>
+            <input type="hidden" name="803_formed_0_4_label_true" value="Non-Self">
+            <input type="hidden" name="803_formed_0_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="803_formed_0_4_utterance" value="their line formed along the west wall">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="803_formed_0_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="803_formed_0_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="803_formed_0_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="803_formed_0_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="803_formed_0_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="803_formed_0_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="803_formed_0_5_answer" value="No"> No</label>
+            <input type="hidden" name="803_formed_0_5_label_true" value="Non-Self">
+            <input type="hidden" name="803_formed_0_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="803_formed_0_5_utterance" value="their line formed along the west wall">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="803_formed_0_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="803_formed_0_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="803_formed_0_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="803_formed_0_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="803_formed_0_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="803_formed_0_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="803_formed_0_6_answer" value="No"> No</label>
+            <input type="hidden" name="803_formed_0_6_label_true" value="Non-Self">
+            <input type="hidden" name="803_formed_0_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="803_formed_0_6_utterance" value="their line formed along the west wall">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="803_formed_0_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="803_formed_0_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="803_formed_0_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="803_formed_0_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="803_formed_0_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
-    </div>
-</div>
-<!-- NIA Label: Enduring -->
-<div class="utterance-block">
-    <p><strong>Utterance:</strong> the tide reaches the same high point on clear days</p>
-    <p><strong>Verb:</strong> reaches</p>
-    <p><strong>Disambiguation:</strong> None</p>
-    <!-- Binary 1 -->
-<div class="question">1. Is this an example of a Targeted verb?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q9_1" value="yes"> Yes</label>
-    <label><input type="radio" name="q9_1" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c9_1" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c9_1" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c9_1" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c9_1" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c9_1" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 2 -->
-<div class="question">2. Is this verb Externally Perceptible?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q9_2" value="yes"> Yes</label>
-    <label><input type="radio" name="q9_2" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c9_2" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c9_2" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c9_2" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c9_2" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c9_2" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 3 -->
-<div class="question">3. Is this verb in the Present?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q9_3" value="yes"> Yes</label>
-    <label><input type="radio" name="q9_3" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c9_3" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c9_3" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c9_3" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c9_3" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c9_3" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 4 -->
-<div class="question">4. Is this describing a state?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q9_4" value="yes"> Yes</label>
-    <label><input type="radio" name="q9_4" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c9_4" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c9_4" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c9_4" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c9_4" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c9_4" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
-<!-- Binary 5 -->
-<div class="question">5. Is this verb Agentive?</div>
-<div class="radio-group">
-    <label><input type="radio" name="q9_5" value="yes"> Yes</label>
-    <label><input type="radio" name="q9_5" value="no"> No</label>
-</div>
-<div class="question">Confidence:</div>
-<div class="radio-group">
-    <label class="confidence-label"><input type="radio" name="c9_5" value="1">1</label>
-    <label class="confidence-label"><input type="radio" name="c9_5" value="2">2</label>
-    <label class="confidence-label"><input type="radio" name="c9_5" value="3">3</label>
-    <label class="confidence-label"><input type="radio" name="c9_5" value="4">4</label>
-    <label class="confidence-label"><input type="radio" name="c9_5" value="5">5</label>
-</div>
-<p style="font-size: 0.9em; color: #555;">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p>
-<hr>
-<br>
 
-    <div class="disambiguation-note">
-        <strong>Disambiguation Examples:</strong><br>
+    </div>
+
+    <div class="utterance-block" data-eval-id="216_feel_1">
+        <p><strong>Utterance:</strong> that is one way to feel about it let us explore some other interpretations</p>
+        <p><strong>Verb:</strong> feel</p>
+        <p><strong>Disambiguation:</strong> None</p>
+
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="216_feel_1_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="216_feel_1_1_answer" value="No"> No</label>
+            <input type="hidden" name="216_feel_1_1_label_true" value="Subjective">
+            <input type="hidden" name="216_feel_1_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="216_feel_1_1_utterance" value="that is one way to feel about it let us explore some other interpretations">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="216_feel_1_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="216_feel_1_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="216_feel_1_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="216_feel_1_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="216_feel_1_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="216_feel_1_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="216_feel_1_2_answer" value="No"> No</label>
+            <input type="hidden" name="216_feel_1_2_label_true" value="Subjective">
+            <input type="hidden" name="216_feel_1_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="216_feel_1_2_utterance" value="that is one way to feel about it let us explore some other interpretations">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="216_feel_1_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="216_feel_1_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="216_feel_1_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="216_feel_1_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="216_feel_1_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="216_feel_1_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="216_feel_1_3_answer" value="No"> No</label>
+            <input type="hidden" name="216_feel_1_3_label_true" value="Subjective">
+            <input type="hidden" name="216_feel_1_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="216_feel_1_3_utterance" value="that is one way to feel about it let us explore some other interpretations">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="216_feel_1_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="216_feel_1_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="216_feel_1_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="216_feel_1_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="216_feel_1_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="216_feel_1_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="216_feel_1_4_answer" value="No"> No</label>
+            <input type="hidden" name="216_feel_1_4_label_true" value="Subjective">
+            <input type="hidden" name="216_feel_1_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="216_feel_1_4_utterance" value="that is one way to feel about it let us explore some other interpretations">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="216_feel_1_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="216_feel_1_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="216_feel_1_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="216_feel_1_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="216_feel_1_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="216_feel_1_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="216_feel_1_5_answer" value="No"> No</label>
+            <input type="hidden" name="216_feel_1_5_label_true" value="Subjective">
+            <input type="hidden" name="216_feel_1_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="216_feel_1_5_utterance" value="that is one way to feel about it let us explore some other interpretations">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="216_feel_1_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="216_feel_1_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="216_feel_1_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="216_feel_1_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="216_feel_1_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="216_feel_1_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="216_feel_1_6_answer" value="No"> No</label>
+            <input type="hidden" name="216_feel_1_6_label_true" value="Subjective">
+            <input type="hidden" name="216_feel_1_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="216_feel_1_6_utterance" value="that is one way to feel about it let us explore some other interpretations">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="216_feel_1_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="216_feel_1_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="216_feel_1_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="216_feel_1_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="216_feel_1_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
         Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
-        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
         Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
-        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
-        Experiential vs Stative: “He is running a race.” vs “He is a runner.”
+
     </div>
-</div>
 
+    <div class="utterance-block" data-eval-id="399_reaches_0">
+        <p><strong>Utterance:</strong> the tide reaches the same high point on clear days</p>
+        <p><strong>Verb:</strong> reaches</p>
+        <p><strong>Disambiguation:</strong> None</p>
 
-<script>
-  function submitForm() {
-    // You could add form validation here if needed
-    // window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
-  }
-</script>
+        <div class="question">
+            <p>1. Is this verb Communicatively Targeted?</p>
+            <label><input type="radio" name="399_reaches_0_1_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="399_reaches_0_1_answer" value="No"> No</label>
+            <input type="hidden" name="399_reaches_0_1_label_true" value="Enduring">
+            <input type="hidden" name="399_reaches_0_1_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="399_reaches_0_1_utterance" value="the tide reaches the same high point on clear days">
 
-<script>
-function submitResults() {
-    const prolificId = new URLSearchParams(window.location.search).get("PROLIFIC_PID") || "UNKNOWN";
-    const responses = [];
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="399_reaches_0_1_confidence" value="1"> 1</label>
+            <label><input type="radio" name="399_reaches_0_1_confidence" value="2"> 2</label>
+            <label><input type="radio" name="399_reaches_0_1_confidence" value="3"> 3</label>
+            <label><input type="radio" name="399_reaches_0_1_confidence" value="4"> 4</label>
+            <label><input type="radio" name="399_reaches_0_1_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
 
-    for (let i = 0; i < 10; i++) {
-        for (let j = 1; j <= 5; j++) {
-            const q = document.querySelector(`input[name="q${i}_${j}"]:checked`);
-            const c = document.querySelector(`input[name="c${i}_${j}"]:checked`);
-            if (q && c) {
-                responses.push({
-                    question_id: `q${i}_${j}`,
-                    answer: q.value,
-                    confidence: parseInt(c.value)
+        <div class="question">
+            <p>2. Is this verb Externally Perceptible?</p>
+            <label><input type="radio" name="399_reaches_0_2_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="399_reaches_0_2_answer" value="No"> No</label>
+            <input type="hidden" name="399_reaches_0_2_label_true" value="Enduring">
+            <input type="hidden" name="399_reaches_0_2_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="399_reaches_0_2_utterance" value="the tide reaches the same high point on clear days">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="399_reaches_0_2_confidence" value="1"> 1</label>
+            <label><input type="radio" name="399_reaches_0_2_confidence" value="2"> 2</label>
+            <label><input type="radio" name="399_reaches_0_2_confidence" value="3"> 3</label>
+            <label><input type="radio" name="399_reaches_0_2_confidence" value="4"> 4</label>
+            <label><input type="radio" name="399_reaches_0_2_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>3. Is this verb in the Present?</p>
+            <label><input type="radio" name="399_reaches_0_3_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="399_reaches_0_3_answer" value="No"> No</label>
+            <input type="hidden" name="399_reaches_0_3_label_true" value="Enduring">
+            <input type="hidden" name="399_reaches_0_3_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="399_reaches_0_3_utterance" value="the tide reaches the same high point on clear days">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="399_reaches_0_3_confidence" value="1"> 1</label>
+            <label><input type="radio" name="399_reaches_0_3_confidence" value="2"> 2</label>
+            <label><input type="radio" name="399_reaches_0_3_confidence" value="3"> 3</label>
+            <label><input type="radio" name="399_reaches_0_3_confidence" value="4"> 4</label>
+            <label><input type="radio" name="399_reaches_0_3_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>4. Is this verb in Reality/ Actual?</p>
+            <label><input type="radio" name="399_reaches_0_4_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="399_reaches_0_4_answer" value="No"> No</label>
+            <input type="hidden" name="399_reaches_0_4_label_true" value="Enduring">
+            <input type="hidden" name="399_reaches_0_4_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="399_reaches_0_4_utterance" value="the tide reaches the same high point on clear days">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="399_reaches_0_4_confidence" value="1"> 1</label>
+            <label><input type="radio" name="399_reaches_0_4_confidence" value="2"> 2</label>
+            <label><input type="radio" name="399_reaches_0_4_confidence" value="3"> 3</label>
+            <label><input type="radio" name="399_reaches_0_4_confidence" value="4"> 4</label>
+            <label><input type="radio" name="399_reaches_0_4_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>5. Is this describing a State?</p>
+            <label><input type="radio" name="399_reaches_0_5_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="399_reaches_0_5_answer" value="No"> No</label>
+            <input type="hidden" name="399_reaches_0_5_label_true" value="Enduring">
+            <input type="hidden" name="399_reaches_0_5_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="399_reaches_0_5_utterance" value="the tide reaches the same high point on clear days">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="399_reaches_0_5_confidence" value="1"> 1</label>
+            <label><input type="radio" name="399_reaches_0_5_confidence" value="2"> 2</label>
+            <label><input type="radio" name="399_reaches_0_5_confidence" value="3"> 3</label>
+            <label><input type="radio" name="399_reaches_0_5_confidence" value="4"> 4</label>
+            <label><input type="radio" name="399_reaches_0_5_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+        <div class="question">
+            <p>6. Is this verb Agentive?</p>
+            <label><input type="radio" name="399_reaches_0_6_answer" value="Yes"> Yes</label>
+            <label><input type="radio" name="399_reaches_0_6_answer" value="No"> No</label>
+            <input type="hidden" name="399_reaches_0_6_label_true" value="Enduring">
+            <input type="hidden" name="399_reaches_0_6_batch_filename" value="batch_001c.csv">
+            <input type="hidden" name="399_reaches_0_6_utterance" value="the tide reaches the same high point on clear days">
+
+        </div>
+        <div class="confidence">
+            <p>Confidence:</p>
+            <label><input type="radio" name="399_reaches_0_6_confidence" value="1"> 1</label>
+            <label><input type="radio" name="399_reaches_0_6_confidence" value="2"> 2</label>
+            <label><input type="radio" name="399_reaches_0_6_confidence" value="3"> 3</label>
+            <label><input type="radio" name="399_reaches_0_6_confidence" value="4"> 4</label>
+            <label><input type="radio" name="399_reaches_0_6_confidence" value="5"> 5</label>
+        </div>
+        <p class="confidence-desc">1) just guessing, 2) have a hunch, 3) seems right, 4) pretty sure, 5) I'm certain</p><br><br>
+
+    
+        Disambiguation Examples: <br>
+        <br>
+        Targeted vs Non-Targeted: “He told her the news.” vs “He spoke at the event.”<br>
+        Externally Perceptible vs Internally Constrained: “He waved his hand.” vs “He felt anxious.”<br>
+        Present vs Not-Present: “She is walking to the store.” vs “She walked to the store.”<br>
+        Actual ve Hypothetical: "I'm at the store" vs "I should buy some milk." <br>
+        Experiential vs Stative: “He is running a race.” vs “He is a runner.” <br>
+        Agentive vs Non-Agentive: “She jumped over the fence.” vs “The leaf fell from the tree.”<br>
+
+    </div>
+
+    <button id="submitBtn">Submit</button>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            const prolific_pid =
+                urlParams.get("prolific_pid") ||
+                urlParams.get("PROLIFIC_PID") ||  // <-- catch the new name
+                urlParams.get("participant_id") ||  // just in case (legacy)
+                "unknown";
+
+            const responses = [];
+            const blocks = document.querySelectorAll('.utterance-block');
+            blocks.forEach((block, blockIndex) => {
+                const eval_id = block.dataset.evalId;
+                const questions = block.querySelectorAll('.question');
+                questions.forEach((q, qIndex) => {
+                    const q_num = qIndex + 1;
+                    const question_id = `${eval_id}_${q_num}`;
+                    const answerInputs = q.querySelectorAll(`input[name="${question_id}_answer"]`);
+                    const confidenceInputs = document.querySelectorAll(`input[name="${question_id}_confidence"]`);
+                    const labelTrueInput = q.querySelector(`input[name="${question_id}_label_true"]`);
+                    const batchFilenameInput = q.querySelector(`input[name="${question_id}_batch_filename"]`);
+                    const utteranceInput = q.querySelector(`input[name="${question_id}_utterance"]`);
+                    const utterance = utteranceInput ? utteranceInput.value : 'unknown';
+                    
+                    
+                    let answer = '';
+                    answerInputs.forEach(input => { if (input.checked) answer = input.value; });
+
+                    let confidence = '';
+                    confidenceInputs.forEach(input => { if (input.checked) confidence = input.value; });
+
+                    const label_true = labelTrueInput ? labelTrueInput.value : 'unknown';
+                    const batch_filename = batchFilenameInput ? batchFilenameInput.value : 'unknown';
+
+                    if (answer && confidence) {
+
+                        console.log("Recording:", {
+                            question_id,
+                            answer,
+                            confidence,
+                            label_true,
+                            batch_filename
+                        });
+                    
+                        responses.push({
+                            question_id,
+                            answer,
+                            confidence,
+                            label_true,
+                            batch_filename,
+                            utterance
+                        });
+                    }
                 });
-            }
-        }
-    }
+            });
 
-    fetch("https://verb-tax-backend.onrender.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            prolific_pid: prolificId,
-            responses: responses
-        })
-    })
-    .then(res => {
-        if (res.ok) {
-            window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
-        } else {
-            alert("Submission failed. Please refresh and try again.");
-        }
-    })
-    .catch(err => {
-        alert("Error submitting. Please check your connection and try again.");
-        console.error(err);
-    });
-}
 
-</script>
-
-<script>
-function submitResults() {
-    const prolificId = new URLSearchParams(window.location.search).get("PROLIFIC_PID") || "UNKNOWN";
-    const responses = [];
-
-    for (let i = 0; i <= 9; i++) {  // Assuming 10 utterances
-        for (let j = 1; j <= 5; j++) {
-            const q = document.querySelector(`input[name="q${i}_${j}"]:checked`);
-            const c = document.querySelector(`input[name="c${i}_${j}"]:checked`);
-            if (q && c) {
-                responses.push({
-                    question_id: `q${i}_${j}`,
-                    answer: q.value,
-                    confidence: parseInt(c.value)
+            const data = { prolific_pid, responses };
+            console.log("Submitting the following data:", JSON.stringify(data, null, 2));
+            
+            try {
+                const response = await fetch('https://verb-tax-backend.onrender.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
                 });
-            } else {
-                alert(`Please complete all answers and confidence ratings for Utterance ${i + 1}, Question ${j}`);
-                return;
+                if (response.ok) {
+                    window.location.href = 'https://app.prolific.com/submissions/complete?cc=C45E9BZU';
+                } else {
+                    alert('Submission failed.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Submission error.');
             }
-        }
-    }
-
-    fetch("https://verb-tax-backend.onrender.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prolific_pid: prolificId, responses: responses })
-    })
-    .then(res => {
-        if (res.ok) {
-            window.location.href = "https://app.prolific.com/submissions/complete?cc=C45E9BZU";
-        } else {
-            alert("Submission failed. Please refresh and try again.");
-        }
-    })
-    .catch(err => {
-        alert("Error submitting. Please check your connection and try again.");
-        console.error(err);
-    });
-}
-</script>
-
-<div style="text-align: center; margin-top: 40px;">
-    <button onclick="submitResults()" style="padding: 10px 20px; font-size: 16px;">Submit</button>
-</div>
-
+        });
+    </script>
 </body>
 </html>

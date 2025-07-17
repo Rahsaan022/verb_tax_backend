@@ -33,7 +33,6 @@ def home():
 def submit():
     data = request.json
     prolific_id = data.get("prolific_pid", "unknown")
-    filename = data.get("filename", "unknown_batch")
     responses = data.get("responses", [])
 
     with open(RESULTS_FILE, mode='a', newline='', encoding='utf-8') as f:
@@ -42,19 +41,38 @@ def submit():
             question_id = r.get("question_id", "")
             answer = r.get("answer", "")
             confidence = r.get("confidence", "")
-            utterance = r.get("utterance", "")
-            nia = r.get("nia", "")
-            verb = question_id.split("_")[0] if "_" in question_id else ""
+            utterance = r.get("utterance", "unknown")
+            nia = r.get("label_true", "unknown")
+            filename = r.get("batch_filename", "unknown_batch")
             timestamp = datetime.utcnow().isoformat()
+
+            # Parse structure: [utterance_id]_[verb]_[eval_num]_[tax_q_num]
+            q_parts = question_id.split("_")
+            if len(q_parts) >= 4:
+                evaluation_id = "_".join(q_parts[:-1])     # everything except last
+                verb = q_parts[1]
+                utt_eval_number = q_parts[2]
+                test_taxq_number = q_parts[3]
+            else:
+                evaluation_id = "unknown_eval"
+                verb = "unknown"
+                utt_eval_number = "unknown"
+                test_taxq_number = "unknown"
+
+            # test_q_number (1–10) expected from frontend
+            test_q_number = r.get("test_q_number", "unknown")
 
             writer.writerow([
                 timestamp,
                 filename,
                 utterance,
-                verb,
                 nia,
                 prolific_id,
-                question_id,
+                evaluation_id,
+                verb,
+                utt_eval_number,
+                test_q_number,
+                test_taxq_number,
                 answer,
                 confidence
             ])
